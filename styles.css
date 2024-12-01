@@ -39,9 +39,9 @@ a {
 
 .section__header {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-color-header);
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 
 .section__description {
@@ -204,13 +204,70 @@ nav {
     justify-content: center;
   }
   
-
   .client__logo img {
     width: 48px;
     height: 48px;
   }
 
+  .community__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .community__container .section__header {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .community__container .section__description {
+    margin-top: 8px;
+  }
+
+  .community__grid {
+    margin-top: 16px;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .community__card {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .community__details{
+    max-width: 300px;
+    padding: 24px 32px;
+    text-align: center;
+  }
+
+  .community__icon span {
+    font-size: 48px;
+    color: var(--primary-color-dark);
+  }
+
+  .community__card h3 {
+    margin-top: 8px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: var(--text-color-header);
+  }
+
+  .community__card p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+
+  @media (width > 576px) {
+    .community__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+  }
 
 @media (width > 768px) {
     nav {
@@ -275,6 +332,10 @@ nav {
 
     .hero__container {
         grid-template-columns: 2fr 1fr;
+    }
+
+    .community__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
